@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: my-mongo-container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+      - ./dump:/dump   # Mount the directory containing the MongoDB dump
+    
+
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-jupyter-container
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app/
+
+volumes:
+  mongo_data:
