@@ -5,7 +5,7 @@ FROM python:3.8
 WORKDIR /app
 
 # Install required Python packages
-RUN pip install jupyter pandas sqlalchemy ipython-sql numpy psycopg2-binary clickhouse-driver pandas scikit-learn clickhouse-sqlalchemy
+RUN pip install jupyter pandas sqlalchemy ipython-sql numpy psycopg2-binary clickhouse-driver pandas scikit-learn clickhouse-sqlalchemy gdown
 
 # Expose the port for Jupyter Notebook
 EXPOSE 8888

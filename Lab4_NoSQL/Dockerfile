@@ -5,7 +5,7 @@ FROM python:3.8
 WORKDIR /app
 
 # Install required Python packages
-RUN pip install jupyter pymongo pandas scikit-learn matplotlib seaborn 
+RUN pip install jupyter pymongo pandas scikit-learn matplotlib seaborn gdown
 
 # Expose the port for Jupyter Notebook
 EXPOSE 8888
